@@ -1,0 +1,313 @@
+body {
+    background: #6441A5;
+}
+
+#add-button {
+    background: #00E676;
+    border-color: #00E676;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 175px;
+    transition: background, 0.5s;
+}
+
+#add-button:hover {
+    background: #00b85c;
+    border-color: #00b85c;
+}
+
+#add-stream-text {
+    border-color: #6441A5;
+    height: 50px;
+    margin-top: 15px;
+    width: 300px;
+    outline: none;
+}
+
+#main {
+    margin-top: 50px;
+    transition: opacity .4s;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#submit-button {
+    background: #6441A5;
+    border-radius: 3%;
+    height: 50px;
+    margin: 25px 0 0 200px;
+    text-align: center;
+    width: 200px;
+}
+
+#submit-button p {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 25px;
+    padding-top: 8px;
+}
+
+.filter-button {
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: background 0.5s;
+    width: 200px;
+    font-family: "Cabin Sketch";
+    font-size: 17px;
+    border-radius: 15px 0 0 15px;
+    border-right: solid 1px;
+}
+
+.filter-button p {
+    color: #FFF;
+    font-size: 2em;
+}
+
+.filter-button:hover {
+    background:#616161;
+}
+
+.left-nav {
+    background: #212121;
+    border-color: #616161;
+    border-right: solid 1px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    float: left;
+}
+
+.fa-twitch {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-size: 75px;
+}
+
+.logo {
+    border-bottom: solid;
+    border-radius: 5px 5px 0 0;
+    border-width: 1px;
+    height: 175px;
+    left: 0;
+    position: absolute;
+    width: 175px;
+}
+
+.overlay {
+    background: #000;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s;
+    width: 100%;
+}
+
+.overlay .fa-close {
+    color: white;
+    font-size: 25px;
+    margin: 5px 0 0 135px;
+    transition: text-shadow 0.3s;
+}
+
+.overlay .fa-close:hover {
+    text-shadow: 0 0 30px white;
+}
+
+.overlay p {
+    color: white;
+    margin: 10px 5px 0 10px !important;
+    text-align: left;
+    overflow: hidden;
+}
+
+.stream {
+    background: white;
+    border-bottom: solid;
+    border-color: #6441A5;
+    border-radius: 5px;
+    border-width: 10px;
+    box-shadow: 10px 10px 5px #4A148C;
+    margin: 0 30px 20px 0;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.5s;
+    height: 250px;
+    width: 175px;
+}
+
+.stream p {
+    margin: 9px 0 0 -10px;
+    color: #212121;
+    transition: color 0.3s;
+}
+
+.stream:hover .overlay {
+    opacity: 0.9;
+}
+
+.stream:hover p {
+    color: white;
+}
+
+.submit-popup {
+    background: #FFF;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #212121;
+    height: 180px;
+    margin-left: -200px;
+    opacity: 0;
+    top: 30%;
+    position: fixed;
+    left: 50%;
+    text-align: center;
+    transition: opacity 0.4s;
+    visibility: hidden;
+    width: 400px;
+}
+
+.submit-popup .fa-close {
+    cursor: pointer;
+    font-size: 30px;
+    margin: 5px 0 0 18px;
+    position: absolute;
+}
+
+#submit-button {
+    margin-left: 0;
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 25px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px darkgray;
+}
+
+#submit-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px darkgray;
+    background-color: #400080;
+}
+
+#add-status {
+    margin-top: 10px;
+}
+
+.title {
+    bottom: 15px;
+    font-size: 20px;
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+input[type="text"] {
+    color: #212121;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .left-nav {
+        width: 150px;
+    }
+    .filter-button {
+        width: 150px;
+    }
+    .fa-twitch {
+        margin-left: 38px;
+    }
+    #main {
+        margin-top: 20px;
+        margin-left: 180px;
+    }
+} 
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .left-nav {
+        width: 120px;
+    }
+    .filter-button {
+        width: 120px;
+    }
+    .fa-twitch {
+        margin-left: 22px;
+    }
+    #main {
+        margin-left: 130px;
+    }
+    .submit-popup {
+        margin-left: -150px;
+        width: 300px;
+    }
+    .submit-popup .fa-close {
+        margin: 4px 0 0 8px;
+    }
+    #add-stream-text {
+        width: 220px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+ 
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .left-nav {
+        width: 200px;
+    }
+    .fa-twitch {
+        margin-left: 60px;
+    }
+    #main {
+        margin-left: 250px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    
+}    
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+   
+}

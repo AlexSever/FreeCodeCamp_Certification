@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Simon Game</title>
+    
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="simon">
+            <div class="row">
+                <div role="button" class="clicking green" data-id="0"></div>
+                <div role="button" class="clicking red" data-id="1"></div>
+            </div>
+            <div class="row">
+                <div role="button" class="clicking yellow" data-id="2"></div>
+                <div role="button" class="clicking blue" data-id="3"></div>
+            </div>
+            <div class="main-menu">
+                <div class="settings">
+                    <div class="row r1">
+                        <h1 class="title">Simon<sup>®</sup></h1>
+                    </div>
+                    <div class="row r2">
+                        <div class="display-wrapper">
+                            <div class="display">
+                                <span>--</span>
+                            </div>
+                            <span class="label block">SCORE</span>
+                        </div>
+                        <div class="start-game">
+                            <div class="button"></div>
+                            <span class="label block">START</span>
+                        </div>
+                        <div class="strict-mode">
+                            <div class="led"></div>
+                            <div class="button"></div>
+                            <span class="label block">STRICT</span>
+                        </div>
+                    </div>
+                    <div class="row r3">
+                        <span class="label inline">OFF</span>
+                        <div class="switch">
+                            <div class="button-switch"></div>
+                        </div>
+                        <span class="label inline">ON<span>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer" class="text-center">
+                Designed &amp; Coded by <br>
+                <a href="http://alexei-portfolio.appspot.com/" target="_blank" style="color: crimson;">Alexei Miasin</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

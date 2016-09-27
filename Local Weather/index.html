@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Weather Watch</title>
+    
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Fredoka+One'>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div class="jumbotron weather-today">
+        <div class="container-fluid weather-info">
+            <div class="col-xs-12 col-sm-3 marque">
+                <h1 class="app-title">Weather Watch</h1>
+                <p>for</p>
+                <h1 id="city-name"></h1>
+                <h1 id="country-name"></h1>
+            </div>
+            <div class="col-xs-12 col-sm-7 the-board">
+                <div class="col-sm-5 temperature">
+                    <div class="current-temp"><h1><span class="temp-num"></span></h1></div>
+                        <span class="deg-sign">&deg;</span>
+                        <button class="btn-temp btnF" name="toggle" value="f" clicked="true">F</button><br>
+                        <br>
+                        <button class="btn-temp btnC" name="toggle" value="c">C</button>
+                    <div class="weather-description"><span class="info"></span></div>
+                    <div class="weather-icon"></div>
+                </div>
+                <div class="col-sm-6 more-stats">
+                    <!--<div class="real-feel">Feel: <span class="info"></span>&deg;</div>-->
+                    <div class="row">
+                        <div class="col-md-6 high">High: <span class="info"></span>&deg;</div>
+                        <div class="col-md-6 low">Low: <span class="info"></span>&deg;</div>
+                    </div>
+                    <div class="clouds">Clouds: <span class="info"></span></div>
+                    <div class="humidity">Humidity: <span class="info"></span></div>
+                    <div class="wind">Wind: <span class="info"></span></div>
+                    <div class="sunrise">Sunrise: <span class="info"></span></div>
+                    <div class="sunset">Sunset: <span class="info"></span></div>
+                    <div id="new_city">
+                        <input type="text" value="" placeholder="New City, Country" id="city_search_name" autocomplete="off">
+                        <a class="btn btn-info btn-md" id="new-city-search-btn">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="container-fluid bottom-container">
+        <h2 class="forecast-header">6 Day Forecast</h2>
+        <div class="row forecast">
+            <div class="col-sm-4 col-lg-2 days day1">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+            <div class="col-sm-4 col-lg-2 days day2">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+            <div class="col-sm-4 col-lg-2 days day3">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+            <div class="col-sm-4 col-lg-2 days day4">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+            <div class="col-sm-4 col-lg-2 days day5">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+            <div class="col-sm-4 col-lg-2 days day6">
+                <div class="dayName"></div>
+                <div class="row desc"></div>
+                <div class="forecast-icon"></div>
+                <div class="row temps"><span class="info"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- JQuery Geocomplete Plugin
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+    -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Google Autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD_L9ZrEXNoOsr8eaSQQai_aQCp_UxrPA&libraries=places"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

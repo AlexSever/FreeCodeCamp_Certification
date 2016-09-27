@@ -1,0 +1,177 @@
+body {
+	background-color: black;
+}
+
+p {
+	color: #FFF;
+	font-size: 18px;
+	line-height: 1.1;
+	font-family: 'Roboto Slab', serif;
+}
+
+a {
+	font-size: 20px;
+	font-family: Arial;
+}
+
+h1 {
+	color: #FFC000;
+	font-family: 'EB Garamond', serif;
+	text-align: center;
+	font-size: 10vmin;
+}
+
+.quote {
+	font-family: 'Miss Fajardose', cursive;
+	font-size: 18vmin;
+	color: #E0E0E0;
+	margin-top: -0.1em;
+	line-height: 0.7;
+}
+
+.video {
+	padding: 2em 2em 0em 2em;
+}
+
+.text {
+	padding: 2em 2em 0em 2em;
+	text-align: justify;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.link {
+	text-align: center;
+	color: #FFC000;
+	font-family: 'EB Garamond', serif;
+}
+
+.movies {
+	padding: 2em 2em 0em 2em;
+	text-align: center;
+}
+
+.movie {
+    width: 70%;
+  	margin-left: auto;
+  	margin-right: auto;
+	-webkit-transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	-o-transition: all ease 0.2s;
+	-ms-transition: all ease 0.2s;
+	transition: all ease 0.2s;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+}
+
+.tatoo {
+	font-family: 'Miss Fajardose', cursive;
+	color: #E0E0E0;
+	text-align: right;
+	padding: 0em 0.5em 0em 0em;
+	font-size: 12vmin;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.tatoo {
+		text-align: center;
+		font-size: 17vmin;
+		margin-top: -20px;
+	}
+
+	.movie {
+		margin-bottom: 40px;
+		width: 100%;
+	}
+
+	#lastRow {
+		display: none;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.video {
+		padding: 1em 0.5em 0em 0.5em;
+	}
+
+	.text {
+		padding: 1em 0.5em 0em 0.5em;
+	}
+
+	.movies {
+		padding: 1em 0.5em 0em 0.5em;
+	}
+
+	.link {
+		margin-top: 3px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	/*h1 {
+		font-size: 50px;
+	}*/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	p {
+		font-size: 25px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.quote {
+		display: inline-block;
+		margin-bottom: 0.1em;
+	}
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.tatoo {
+		margin-top: 30px;
+	}
+}

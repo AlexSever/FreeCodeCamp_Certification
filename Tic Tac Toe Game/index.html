@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Tic Tac Toe Game</title>
+    
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--FontAwesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="difficulty">
+        <i class="fa fa-laptop"></i>
+        <div id="radio">
+            <input id="radio1" type="radio" name="difficulty" value="random">
+            <label for="radio1">Random</label><br>
+            <input id="radio2" type="radio" name="difficulty" value="intelligent" checked>
+            <label for="radio2">Intelligent</label>
+        </div>
+        <div><img id="replay" src="img/refresh4.jpg"></div>
+    </div>
+    <div id="board" class="container">
+        <div class="row">
+            <div id="field-1" class="col-xs-4 field"><span id="f-1"></span></div>
+            <div id="field-2" class="col-xs-4 field"><span id="f-2"></span></div>
+            <div id="field-3" class="col-xs-4 field"><span id="f-3"></span></div>
+        </div>
+        <div class="row">
+            <div id="field-4" class="col-xs-4 field hover"><span id="f-4">X</span></div>
+            <div id="field-5" class="col-xs-4 field"><span id="f-5" class="intro">Choose<br>your<br>side</span></div>
+            <div id="field-6" class="col-xs-4 field hover"><span id="f-6">O</span></div>
+        </div>
+        <div class="row">
+            <div id="field-7" class="col-xs-4 field"><span id="f-7"></span></div>
+            <div id="field-8" class="col-xs-4 field"><span id="f-8"></span></div>
+            <div id="field-9" class="col-xs-4 field"><span id="f-9"></span></div>
+        </div>
+    </div>
+    <div id="score">
+        <i class="fa fa-user"></i><span id="player">0</span>
+        <i class="fa fa-laptop"></i><span id="computer">0</span>
+        <i class="fa fa-ban"></i><span id="draw">0</span>
+    </div>
+
+    <footer id="footer" class="text-center">
+        <div class="container">
+            Designed &amp; Coded by<br>
+            <a href="http://alexei-portfolio.appspot.com/" target="_blank" style="color: #922031;">Alexei Miasin</a>
+        </div>
+    </footer>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Twitch Streams</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body translate="no" >
+    <div class='left-nav'>
+        <div class='filter-button' id='all'>
+            <p>All</p>
+        </div>
+        <div class='filter-button' id='offline'>
+            <p>Offline</p>
+        </div>
+        <div class='filter-button' id='online'>
+            <p>Online</p>
+        </div>
+        <a href='http://www.twitch.tv' target='_blank'><i class='fa fa-twitch'></i></a>
+    </div>
+
+    <div id='main'>
+        <!-- DOM Stream Elements are added here -->
+        <div id='the-end'></div>
+    </div>
+    <!--Submission Pop-up remains hidden until use -->
+    <div class='submit-popup'>
+        <input type='text' name='add-stream' id='add-stream-text' placeholder='Stream Name'></input><i class='fa fa-close'></i>
+        <button id="submit-button">Add Stream</button>
+        <p id='add-status'></p>
+    </div>
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS files -->
+    <script src="script.js"></script>
+</body>
+</html>

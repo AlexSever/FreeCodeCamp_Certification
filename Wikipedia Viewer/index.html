@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Wikipedia Viewer</title>
+    
+    <!-- FontAwesome CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="page-wrapper">
+        <div class="container-fluid header">
+            <div class="col-sm-6 logo">
+                <h1> Wikipedia Viewer</h1>
+            </div>
+            <div class="col-sm-6 search-area">
+                <div class="input-group search-input">
+                    <input type="text" placeholder="Type in a query..." class="form-control" id="search-wiki"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-search"><span class="glyphicon glyphicon-search"></span><span class="text"> Search</span></button>
+                        <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-random"><span class="glyphicon glyphicon-random"></span><span class="text"> Random</span></a>
+                    </span>
+                </div>
+                <span class="help-block">'Search' Wikipedia OR click 'Random' for a random article</span>
+            </div>
+        </div>
+        <!--<div class="container results"></div>-->
+    </div>
+    <div class="container results"></div>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+    <!-- ParticlesJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

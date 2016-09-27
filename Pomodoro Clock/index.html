@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Pomodoro Clock</title>
+    
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--FontAwesome CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery library -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>-->
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Pomodoro Clock</h1>
+  		<div id="time" class="center">
+  			<img id="sound" src="img/Sound-on.png" onclick="switchSound()">
+    		<div id="circle">
+      			<div id="inner">
+      				<br>
+        			<p id="output">25:00</p>
+        			<button id="startPause" onclick="startPause()"><i class="fa fa-play"></i></button>
+  					<button id="reset" onclick="reset()"><i class="fa fa-stop"></i></button>
+        		</div>
+    		</div>
+    		<div class="col-xs-6">
+	    		<h3>Session Length</h3>
+				<div id="work_time">25:00</div>
+				<div class="btn-group">
+					<button type="button" class="session-control minus" onclick="minusWorkTime()"><i class="fa fa-minus"></i></button>
+					<button type="button" class="session-control plus" onclick="plusWorkTime()"><i class="fa fa-plus"></i></button>
+				</div>
+			</div>
+			<div class="col-xs-6">
+	    		<h3>Break Length</h3>
+				<div id="break_time">5:00</div>
+				<div class="btn-group">
+					<button type="button" class="break-control minus" onclick="minusBreakTime()"><i class="fa fa-minus"></i></button>
+					<button type="button" class="break-control plus" onclick="plusBreakTime()"><i class="fa fa-plus"></i></button>
+				</div>
+			</div>
+  		</div>
+	</div>
+	<footer id="footer" class="text-center">
+		<!--<div class="container">-->
+	    	Designed &amp; Coded by<br>
+	    	<a href="http://alexei-portfolio.appspot.com/" target="_blank" style="color: #922031;">Alexei Miasin</a>
+		<!--</div>-->
+	</footer>	
+	<!-- Custom JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
