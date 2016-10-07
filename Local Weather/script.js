@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         var input = document.getElementById('city_search_name');
         var autocomplete = new google.maps.places.Autocomplete(input, options);
-        };
+    };
     /* ---- Option 3: ----
     google.maps.event.addDomListener(window, 'load', function () {
         var places = new google.maps.places.Autocomplete(   
@@ -48,13 +48,6 @@ $(document).ready(function() {
         });
     });
     */
-
-    // ==== Callback Function for ip-location ====
-    function ipLocation(callback) {
-        $.getJSON("http://ip-api.com/json", function(response) {
-            callback(response);
-        });
-    };
 
     // ================================
     // -    API URL's FOR REQUESTS    -
@@ -114,21 +107,7 @@ $(document).ready(function() {
         return apiUrlForecastCity;
     };
 
-    // ==== Checking for Errors ====
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
-    } else {
-        //fall back to IP location if geolocation is unavailable
-        ipLocation(function(response) {
-            lat = response.lat;
-            lon = response.lon;
-            console.log("Geolocation is not supported by this browser or disallowed. Location set by IP lookup.");
-            
-            displayCurrentWeather(currentGeoApi(lat, lon));
-
-            displayDailyForecast(forecastGeoApi(lat, lon));
-        });
-    };
+    navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
 
     // ==== If Geolocation Enabled ====
     function positionSuccess(position) {   
@@ -156,16 +135,32 @@ $(document).ready(function() {
         */
         console.log("ERROR: " + error.message);
 
-        ipLocation(function(response) {
-            lat = response.lat;
-            lon = response.lon;
+        $.getJSON("http://ip-api.com/json", function(response) {
+            var cityIP = response.city,
+                lat = response.lat,
+                lon = response.lon;
             console.log("Geolocation is not supported by this browser or disallowed. Location set by IP lookup.");
-
+            
             displayCurrentWeather(currentGeoApi(lat, lon));
 
             displayDailyForecast(forecastGeoApi(lat, lon));
+
+            /*
+            displayCurrentWeather(currentCityApi(cityIP));
+            
+            displayDailyForecast(forecastCityApi(cityIP));
+            */
         });
     };
+
+    // ==== Callback Function for ip-location ====
+    /*
+    function ipLocation(callback) {
+        $.getJSON("http://ip-api.com/json", function(response) {
+            callback(response);
+        });
+    };
+    */
 
     // ===========================
     // -    HELPING FUNCTIONS    -
